@@ -1,0 +1,24 @@
+@import './config.css';
+
+/* font family */
+.font-primary { font-family: var(--font-primary); }
+
+/* background */
+.bg-grad {
+    background: var(--dark);
+    background: linear-gradient(180deg, var(--dark) 0%,var(--green) 100%);
+}
+.bg-dark { background-color: var(--dark); }
+.bg-light { background-color: var(--light); }
+
+/* color */
+.clr-light { color: var(--light); }
+.clr-dark { color: var(--dark); }
+
+/* size */
+.text-100 { font-size: 1rem; }
+.text-125 { font-size: 1.25rem; }
+.text-150 { font-size: 1.5rem; }
+.text-175 { font-size: 1.75rem; }
+.text-200 { font-size: 2rem; }
+.text-250 { font-size: 2.5rem; }
