@@ -1,13 +1,14 @@
 @import './utility.css';
 
-.app-header {
+.header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-    .app-header h1 {
-        transform: translateX(-50%);
+    .header h1 {
+        padding: 0 var(--size-250);
+        letter-spacing: 2px;
+        transform: translateY(-200%);
     }
-    .app-header img {
-        transform: translateX(50%);
-    }
+

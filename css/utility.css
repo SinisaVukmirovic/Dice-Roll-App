@@ -10,6 +10,7 @@
 }
 .bg-dark { background-color: var(--dark); }
 .bg-light { background-color: var(--light); }
+.bg-white { background-color: var(--white); }
 
 /* color */
 .clr-light { color: var(--light); }
@@ -22,3 +23,8 @@
 .text-175 { font-size: 1.75rem; }
 .text-200 { font-size: 2rem; }
 .text-250 { font-size: 2.5rem; }
+
+/* radius */
+.radius { border-radius: 100px; }
+
+.bord-white { border: solid 3px var(--white); }
