@@ -13,6 +13,7 @@
 .bg-white { background-color: var(--white); }
 
 /* color */
+.clr-theme { color: var(--theme); }
 .clr-light { color: var(--light); }
 .clr-dark { color: var(--dark); }
 
@@ -28,3 +29,4 @@
 .radius { border-radius: 100px; }
 
 .bord-white { border: solid 3px var(--white); }
+.bord-theme { border: solid 3px var(--theme); }
