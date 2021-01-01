@@ -8,6 +8,7 @@
     background: var(--dark);
     background: linear-gradient(180deg, var(--dark) 0%,var(--green) 100%);
 }
+.bg-theme { background-color: var(--theme); }
 .bg-dark { background-color: var(--dark); }
 .bg-light { background-color: var(--light); }
 .bg-white { background-color: var(--white); }
