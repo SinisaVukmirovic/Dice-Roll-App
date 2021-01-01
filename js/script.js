@@ -1,15 +1,49 @@
+const rollBtnElem = document.querySelector('#rollBtn');
 const diceElem = document.querySelector('.dice');
 // const dots = dice.querySelectorAll('.dot');
 // const displayNumb = document.querySelector('.display-numb span');
 const numbOfSides = 6;
 const numbOfDots = 9;
 
-for (let i = 0; i < numbOfDots; i++) {
-    const dotElem = document.createElement('span');
-    dotElem.classList.add('dot');
+const generateDice = () => {
+    for (let i = 0; i < numbOfDots; i++) {
+        const dotElem = document.createElement('span');
+        dotElem.classList.add('dot');
+        dotElem.classList.add(`dot-${i + 1}`);
+        diceElem.appendChild(dotElem);
+    }
+    // initial Dice display 
+    diceElem.querySelector('.dot-5').style.visibility = 'visible';
+};
 
-    diceElem.appendChild(dotElem);
-}
+const getRandomNumb = (numb) => {
+    return Math.ceil(Math.random() * numb);
+};
+
+const rollDice = () => {
+    // console.log(getRandomNumb(numbOfSides));
+    getRandomNumb(numbOfSides);
+
+    diceElem.classList.add('rollDiceAnim');
+    setTimeout(() => {
+        diceElem.classList.remove('rollDiceAnim');
+    }, 1000);
+
+};
+
+// const initialDiceDisplay = () => {
+//     // diceElem.querySelectorAll('.dot')[4].style.visibility = 'visible';
+//     console.log(diceElem.querySelectorAll('.dot'));
+// };
+
+generateDice();
+// initialDiceDisplay();
+
+// getRandomNumb(numbOfSides);
+
+rollBtnElem.addEventListener('click', rollDice);
+
+
 
 
 

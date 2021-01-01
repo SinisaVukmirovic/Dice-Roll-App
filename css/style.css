@@ -3,3 +3,15 @@
 @import './utility.css';
 @import './blocks.css';
 
+@keyframes rollDiceAnim {
+    25% {
+        transform: translateX(-7rem) translateY(2rem) rotateZ(-45deg);
+    }
+    75% {
+        transform: translateX(7rem) translateY(-2rem) rotateZ(45deg);
+    }
+}
+
+.dice.rollDiceAnim {
+    animation: rollDiceAnim 300ms ease-in-out 3;
+}

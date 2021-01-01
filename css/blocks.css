@@ -44,14 +44,14 @@
     justify-items: center;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
+    margin: 5rem auto;
     padding: .75rem;
     border-radius: 1rem;
     cursor: pointer;
     transition: transform 250ms ease-in-out;
 }
     .dot {
-        /* visibility: hidden; */
+        visibility: hidden;
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
