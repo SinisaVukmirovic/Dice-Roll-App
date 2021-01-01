@@ -13,5 +13,5 @@
 }
 
 .dice.rollDiceAnim {
-    animation: rollDiceAnim 300ms ease-in-out 3;
+    animation: rollDiceAnim 250ms ease-out 3;
 }

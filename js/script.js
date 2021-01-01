@@ -1,5 +1,5 @@
 const rollBtnElem = document.querySelector('#rollBtn');
-const diceElem = document.querySelector('.dice');
+const diceElem = document.querySelector('#dice');
 // const dots = dice.querySelectorAll('.dot');
 // const displayNumb = document.querySelector('.display-numb span');
 const numbOfSides = 6;
@@ -10,6 +10,7 @@ const generateDice = () => {
         const dotElem = document.createElement('span');
         dotElem.classList.add('dot');
         dotElem.classList.add(`dot-${i + 1}`);
+
         diceElem.appendChild(dotElem);
     }
     // initial Dice display 
@@ -20,15 +21,63 @@ const getRandomNumb = (numb) => {
     return Math.ceil(Math.random() * numb);
 };
 
-const rollDice = () => {
-    // console.log(getRandomNumb(numbOfSides));
-    getRandomNumb(numbOfSides);
-
+const rollDiceAnim = () => {
     diceElem.classList.add('rollDiceAnim');
-    setTimeout(() => {
+    diceElem.addEventListener('animationend', () => {
         diceElem.classList.remove('rollDiceAnim');
-    }, 1000);
+    });
 
+    setTimeout(() => {
+        rollDiceNumb();
+    }, 500);
+}
+
+const rollDiceNumb = () => {
+    diceElem.querySelectorAll('.dot').forEach(dot => dot.style.visibility = 'hidden');
+
+    let rolledNumb = getRandomNumb(numbOfSides);
+    
+    switch (rolledNumb) {
+        case 1:
+            console.log(1);
+            diceElem.querySelector('.dot-5').style.visibility = 'visible';
+        break;
+        case 2:
+            console.log(2);
+            diceElem.querySelector('.dot-1').style.visibility = 'visible';
+            diceElem.querySelector('.dot-9').style.visibility = 'visible';
+        break;
+        case 3:
+            console.log(3);
+            diceElem.querySelector('.dot-1').style.visibility = 'visible';
+            diceElem.querySelector('.dot-5').style.visibility = 'visible';
+            diceElem.querySelector('.dot-9').style.visibility = 'visible';
+        break;
+        case 4:
+            console.log(4);
+            diceElem.querySelector('.dot-1').style.visibility = 'visible';
+            diceElem.querySelector('.dot-3').style.visibility = 'visible';
+            diceElem.querySelector('.dot-7').style.visibility = 'visible';
+            diceElem.querySelector('.dot-9').style.visibility = 'visible';
+        break;
+        case 5:
+            console.log(5);
+            diceElem.querySelector('.dot-1').style.visibility = 'visible';
+            diceElem.querySelector('.dot-3').style.visibility = 'visible';
+            diceElem.querySelector('.dot-5').style.visibility = 'visible';
+            diceElem.querySelector('.dot-7').style.visibility = 'visible';
+            diceElem.querySelector('.dot-9').style.visibility = 'visible';
+        break;
+        case 6:
+            console.log(6);
+            diceElem.querySelector('.dot-1').style.visibility = 'visible';
+            diceElem.querySelector('.dot-2').style.visibility = 'visible';
+            diceElem.querySelector('.dot-3').style.visibility = 'visible';
+            diceElem.querySelector('.dot-7').style.visibility = 'visible';
+            diceElem.querySelector('.dot-8').style.visibility = 'visible';
+            diceElem.querySelector('.dot-9').style.visibility = 'visible';
+        break;
+    }
 };
 
 // const initialDiceDisplay = () => {
@@ -41,7 +90,10 @@ generateDice();
 
 // getRandomNumb(numbOfSides);
 
-rollBtnElem.addEventListener('click', rollDice);
+// getRandomNumb(numbOfSides);
+
+rollBtnElem.addEventListener('click', rollDiceAnim);
+// rollBtnElem.addEventListener('click', rollDiceNumb);
 
 
 

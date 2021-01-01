@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
     .header h1 {
         padding: 0 var(--size-250);
@@ -45,15 +46,17 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     margin: 5rem auto;
-    padding: .75rem;
-    border-radius: 1rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
     cursor: pointer;
+    box-shadow: inset 0 0 4px 12px var(--dark-theme);
     transition: transform 250ms ease-in-out;
 }
     .dot {
         visibility: hidden;
         width: 2rem;
         height: 2rem;
+        border-radius: 1px solid #111;
         border-radius: 50%;
         background: radial-gradient(#fff, #ccc);
         margin: .5rem;
