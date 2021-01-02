@@ -29,5 +29,6 @@
 /* radius */
 .radius { border-radius: 100px; }
 
+/* border */
 .bord-white { border: solid 3px var(--white); }
 .bord-theme { border: solid 3px var(--theme); }

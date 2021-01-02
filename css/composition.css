@@ -11,3 +11,22 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* media query for smaller screen sizes */
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        justify-content: space-evenly;
+    }
+    .app {
+        min-height: 50vh;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 414px) {
+    html {
+        font-size: 10px;
+    }
+}
