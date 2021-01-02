@@ -1,5 +1,6 @@
-const rollBtnElem = document.querySelector('#rollBtn');
-const diceElem = document.querySelector('#dice');
+const app = document.querySelector('.app');
+const rollBtnElem = app.querySelector('#rollBtn');
+const diceElem = app.querySelector('#dice');
 // const dots = dice.querySelectorAll('.dot');
 // const displayNumb = document.querySelector('.display-numb span');
 const numbOfSides = 6;
