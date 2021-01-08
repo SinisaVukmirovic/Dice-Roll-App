@@ -2,6 +2,6 @@
 
 ### Dice Roll App
 
-<a href="https://sinisavukmirovic.github.io/Dice-Roll-App/" target="_blank">DEMO</a>
+%md <a href="https://sinisavukmirovic.github.io/Dice-Roll-App/" target="_blank">DEMO</a>
 
 ##### Dice Roll simulation App, built with vanilla JS and utilizing (trying to) CUBE CSS Methodology for styling the project.
